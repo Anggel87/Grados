@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConverterCelsius">
+
+    <ImageView
+        android:id="@+id/wave"
+        android:layout_width="0dp"
+        android:layout_height="92dp"
+        android:src="@drawable/wave__1_"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/wave1"
+        android:layout_width="0dp"
+        android:layout_height="92dp"
+        android:rotation="180"
+        android:src="@drawable/wave__1_"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fahrenheit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fahrenheit"
+        android:textColor="#414141"
+        android:textSize="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wave1" />
+
+    <EditText
+        android:id="@+id/celsius"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="120dp"
+        android:background="#414141"
+        android:hint="Celsius"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/kelvin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fahrenheit"
+        app:layout_constraintWidth_percent="0.40" />
+
+    <TextView
+        android:id="@+id/farenheitCelsius"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="132dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/kelvin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fahrenheit"
+        app:layout_constraintVertical_bias="0.884"
+        app:layout_constraintWidth_percent="0.40" />
+
+
+    <EditText
+        android:id="@+id/kelvin"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="120dp"
+        android:background="#414141"
+        android:hint="Kelvin"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/boton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/celsius"
+        app:layout_constraintWidth_percent="0.40" />
+
+
+    <TextView
+        android:id="@+id/farenheitKelvin2"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="128dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/boton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/farenheitCelsius"
+        app:layout_constraintVertical_bias="0.812"
+        app:layout_constraintWidth_percent="0.40" />
+
+    <Button
+        android:id="@+id/boton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#414141"
+        android:text="Convertir"
+        app:layout_constraintBottom_toTopOf="@+id/wave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/kelvin" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
